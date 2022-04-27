@@ -160,6 +160,13 @@ ifeq ("$(CONFIG)","EggBot")
     SETTINGS_FILE="settings_eggbot.h"
 endif
 
+# CNC3020 config:
+ifeq ("$(CONFIG)","cnc3020")
+    ifeq ("$(BOARD)","NONE")
+        BOARD=gShield
+    endif
+    SETTINGS_FILE="settings_cnc3020.h"
+endif
 
 include $(wildcard ./board/$(STAR).mk)
 

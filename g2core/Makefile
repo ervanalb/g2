@@ -49,6 +49,11 @@ SETTINGS_FILE ?= settings_default.h
 
 NEEDS_PRINTF_FLOAT=1
 
+# Config for CNC3020
+PLATFORM ?= DUE
+BOARD ?= gShield
+CONFIG ?= cnc3020
+
 # Now invoke the Motate compile system
 include $(MOTATE_PATH)/Motate.mk
 

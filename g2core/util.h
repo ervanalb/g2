@@ -114,7 +114,7 @@ using std::max;
 template <typename T>
 inline T square(const T x) { return (x)*(x); }        /* UNSAFE */
 
-inline float abs(const float a) { return fabs(a); }
+//inline float abs(const float a) { return fabs(a); }
 
 #ifndef avg
 template <typename T>

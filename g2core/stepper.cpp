@@ -71,7 +71,7 @@ exec_timer_type exec_timer;         // triggers calculation of next+1 stepper se
 fwd_plan_timer_type fwd_plan_timer; // triggers planning of next block
 
 // SystickEvent for handling dwells (must be registered before it is active)
-Motate::SysTickEvent dwell_systick_event {[&] {
+Motate::SysTickEvent dwell_systick_event {[] {
     if (--st_run.dwell_ticks_downcount == 0) {
         SysTickTimer.unregisterEvent(&dwell_systick_event);
         _load_move();       // load the next move at the current interrupt level
